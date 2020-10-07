@@ -24,7 +24,12 @@ info about all the commands.
 ### Prerequisites
 
 Only tested on FreeBSD (Developed on FreeBSD 8) and a couple of Linux distros.
-Does not work with colors on ZSH and on default Mac os terminals. 
+It wont compile on MacOS. 
+
+This is probably the shittiest piece of code on the planet but it works.
+
+_if it ain't broke, don't fix it_
+
 
 ## Running
 ![Image of Yaktocat](https://github.com/hexabitsweden/Terminal-post-it/blob/main/archivednotes.png?raw=true)
