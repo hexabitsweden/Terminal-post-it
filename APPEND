@@ -1,0 +1,11 @@
+NAME=$1
+FIL="./notes/PARSE.TXT"
+FIL2="./notes/PARSE2.TXT"
+cat $FIL | while read LINE
+do
+  F25=`echo $LINE`
+echo $F25 $NAME >> $FIL2
+
+done
+rm $FIL
+mv $FIL2 $FIL 

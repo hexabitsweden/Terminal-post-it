@@ -1,0 +1,39 @@
+
+clean () 
+    {
+  cp temp_in/*msg.* .
+  rm temp_in/*msg.* 
+ }
+
+
+add_multi () 
+  {
+ eline='#'
+ date=`date`
+ FIL2=incoming.txt
+cat $FIL2 | while read LINE
+  do
+    NAME=`echo $LINE`
+    #echo $F25 $NAME >> $FIL2
+    ./APPEND $NAME
+    echo '---------------#' >> notes/inlog.txt
+    echo $date$eline >> notes/inlog.txt
+    echo $NAME >> notes/inlog.txt
+    echo '---------------#' >> notes/inlog.txt
+  done
+ clean
+ }
+
+main () 
+  {
+ FILE='incoming.txt'
+if [ -s $FILE ] ; then
+  add_multi
+else
+ exit 0
+ fi ;
+  }
+
+ls temp_in/ | grep msg > incoming.txt
+
+main 

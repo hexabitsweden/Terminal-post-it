@@ -1,0 +1,14 @@
+NAME=$1
+FIL="./notes/PARSE_DEL.TXT"
+FIL2="./notes/PARSE4.TXT"
+FIL3="./notes/PARSE5.TXT"
+cat $FIL | while read LINE
+do
+  F25=`echo $LINE`
+echo $F25 $NAME > $FIL2
+
+done
+awk '{gsub(/Â/,""); print} ' $FIL2 > $FIL3
+rm $FIL
+rm $FIL2
+mv $FIL3 $FIL 

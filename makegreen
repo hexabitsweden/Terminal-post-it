@@ -1,0 +1,6 @@
+name1=$2
+name2=$1
+
+mv $name1 $name2
+./delindex2.sh $2 
+./APPEND $1

@@ -1,0 +1,12 @@
+cc markAsRead.c -o MARKDONE  
+cc postit.c -o tnotes 
+cc fgets.c -o gettxt  
+cc addmore.c -o APPEND2  
+cc addnote.c -o tnotescmd 
+
+
+#cc markAsRead.c -o MARKDONE  2>/dev/null
+#cc postit.c -o tnotes  2>/dev/null
+#cc fgets.c -o gettxt  2>/dev/null
+#cc addmore.c -o APPEND2  2>/dev/null
+#cc addnote.c -o tnotescmd  2>/dev/null
