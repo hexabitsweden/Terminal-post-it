@@ -22,6 +22,7 @@
 #define bpurple  "\e[45m"
 #define menucol "\e[0;30;43m"
 
+/* This should be built in to tnotes.c or imported instead */
 typedef char * string;
 char str[450];
 int i;
