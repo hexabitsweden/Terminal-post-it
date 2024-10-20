@@ -28,7 +28,7 @@ It wont compile on MacOS.
 
 This is probably the shittiest piece of code on the planet but it works.
 
-_if it ain't broke, don't fix it_
+_if it ain't broken, don't fix it_
 
 
 ## Running
