@@ -40,31 +40,31 @@ int i;
 int main (int argc, char const *argv[])
 {
 
-       strcpy(fname, argv[1]);
+  strcpy(fname, argv[1]);
 
-       i2 = strlen(fname)-1;
+  i2 = strlen(fname)-1;
 
-       if( fname[ i2 ] == '\n')
-          fname[i2] = '\0';
+  if( fname[ i2 ] == '\n')
+    fname[i2] = '\0';
 
-    FILE *fp;
-    fp = fopen(fname, "a");
-    strcpy(str, " *DONE* ");
-    i = strlen(str)-1;
+  FILE *fp;
+  fp = fopen(fname, "a");
+  strcpy(str, " *DONE* ");
+  i = strlen(str)-1;
 
-    if( str[ i ] == '\n')
-       str[i] = '\0';
+  if( str[ i ] == '\n')
+    str[i] = '\0';
 
-    fprintf(fp,"%s", str);
-    fclose(fp);
-    strcpy(nname, fname);
-    strcpy(fname2, "./makegreen ");
-    fname[0]='g';
-    strcat(fname2, fname);
-    strcat(fname2, " ");
-    strcat(fname2, nname);
-    system(fname2);
-   /* printf("%s\n", fname2); */
-   }
+  fprintf(fp,"%s", str);
+  fclose(fp);
+  strcpy(nname, fname);
+  strcpy(fname2, "./makegreen ");
+  fname[0]='g';
+  strcat(fname2, fname);
+  strcat(fname2, " ");
+  strcat(fname2, nname);
+  system(fname2);
+  /* printf("%s\n", fname2); */
+}
 
 

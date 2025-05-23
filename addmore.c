@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <dirent.h>
 #include <sys/types.h>
-#include <stdlib.h>
 #define red   "\033[0;31m"
 #define cyan  "\033[1;36m"
 #define green "\033[0;32m"
@@ -39,23 +38,23 @@ char text2[200];
 int main (int argc, char const *argv[])
 {
 
-       strcpy(fname, argv[1]);
-       i2 = strlen(fname)-1;
+  strcpy(fname, argv[1]);
+  i2 = strlen(fname)-1;
 
-       if( fname[ i2 ] == '\n')
-          fname[i2] = '\0';
+  if( fname[ i2 ] == '\n')
+    fname[i2] = '\0';
 
-    FILE *fp;
-    fp = fopen(fname, "a");
-    printf("Enter text: ");
-    fgets(str, 150, stdin);
-    i = strlen(str)-1;
+  FILE *fp;
+  fp = fopen(fname, "a");
+  printf("Enter text: ");
+  fgets(str, 150, stdin);
+  i = strlen(str)-1;
 
-    if( str[ i ] == '\n')
-       str[i] = '\0';
+  if( str[ i ] == '\n')
+    str[i] = '\0';
 
-    printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
-    fprintf(fp,"%s", str);
-    fclose(fp);
-   }
+  printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
+  fprintf(fp,"%s", str);
+  fclose(fp);
+}
 

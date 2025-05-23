@@ -39,53 +39,53 @@ int cols;
 char tcols[8];
 char redc;
 void writeIndex(char *fname)
-     {
-    char danne[40];
-    char danne2[40];
-    strcpy(danne,"./APPEND ");
-    strcpy(danne2,fname);
-    strcat(danne,danne2);
-    system(danne);
+{
+  char danne[40];
+  char danne2[40];
+  strcpy(danne,"./APPEND ");
+  strcpy(danne2,fname);
+  strcat(danne,danne2);
+  system(danne);
 
- }
+}
 
 int main (int argc, char const *argv[])
 
-      {
-       printf("Note Name: ");
-       fgets(note, 80, stdin);
-       strcpy(fname,note);
-       i2 = strlen(fname)-1;
+{
+  printf("Note Name: ");
+  fgets(note, 80, stdin);
+  strcpy(fname,note);
+  i2 = strlen(fname)-1;
 
-       if( fname[ i2 ] == '\n')
-          fname[i2] = '\0';
+  if( fname[ i2 ] == '\n')
+    fname[i2] = '\0';
 
-      char *p;
+  char *p;
 
-      p = strchr(fname, ' ');
+  p = strchr(fname, ' ');
 
-      while (p != NULL) {
-      fname[p - fname]='_';
-      p = strchr(p + 1, ' ');
-      }
+  while (p != NULL) {
+    fname[p - fname]='_';
+    p = strchr(p + 1, ' ');
+  }
 
 
-    FILE *fp;
-    fp = fopen(fname, "a");
-    printf("For background color: type: Red=\"r\", Green=\"g\" or Blue=\"b\" (none=Yellow)\n");
-    printf("Enter text: ");
-    fgets(str, 450, stdin);
-    i = strlen(str)-1;
+  FILE *fp;
+  fp = fopen(fname, "a");
+  printf("For background color: type: Red=\"r\", Green=\"g\" or Blue=\"b\" (none=Yellow)\n");
+  printf("Enter text: ");
+  fgets(str, 450, stdin);
+  i = strlen(str)-1;
 
-    if( str[ i ] == '\n')
-       str[i] = '\0';
+  if( str[ i ] == '\n')
+    str[i] = '\0';
 
-    printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
-    fprintf(fp,"%s%s%s", str, spacer2, spacer2);
-    fclose(fp);
+  printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
+  fprintf(fp,"%s%s%s", str, spacer2, spacer2);
+  fclose(fp);
 
- writeIndex(fname);
-   }
+  writeIndex(fname);
+}
 
 
 

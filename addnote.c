@@ -36,62 +36,60 @@ char *inpt;
 char text[200];
 char text2[200];
 
-
-
 void writeIndex(string fname)
-     {
-    char danne[40];
-    char danne2[40];
-    strcpy(danne,"./APPEND ");
-    strcpy(danne2,fname);
-    strcat(danne,danne2);
-    system(danne);
+{
+  char danne[40];
+  char danne2[40];
+  strcpy(danne,"./APPEND ");
+  strcpy(danne2,fname);
+  strcat(danne,danne2);
+  system(danne);
 
- }
+}
 
- void cmds(char *inpt, string text)
-      {
-      strcpy(fname,inpt);
-      i2 = strlen(fname)-1;
+void cmds(char *inpt, string text)
+{
+  strcpy(fname,inpt);
+  i2 = strlen(fname)-1;
 
-      if( fname[ i2 ] == '\n')
-          fname[i2] = '\0';
+  if( fname[ i2 ] == '\n')
+    fname[i2] = '\0';
 
-    FILE *fp;
-    fp = fopen(fname, "a");
-    strcpy(str,text);
-    i = strlen(str)-1;
+  FILE *fp;
+  fp = fopen(fname, "a");
+  strcpy(str,text);
+  i = strlen(str)-1;
 
-    if( str[ i ] == '\n')
-       str[i] = '\0';
+  if( str[ i ] == '\n')
+    str[i] = '\0';
 
-    printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
-    fprintf(fp,"%s", str);
-    fclose(fp);
- writeIndex(fname);
+  printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
+  fprintf(fp,"%s", str);
+  fclose(fp);
+  writeIndex(fname);
 
 
- }
+}
 
 int main (int argc, char const *argv[])
 
-      {
-        strcpy(text2, argv[2]);
-        strcpy(text, argv[3]);
-        strcpy(inpt, argv[1]);
-        strcpy(tester, "add");
-        if (argv[1]!=NULL) {
-            cmds(text2, text);
-                   }
-        else {
-       printf("Note Name: ");
+{
+  strcpy(text2, argv[2]);
+  strcpy(text, argv[3]);
+  strcpy(inpt, argv[1]);
+  strcpy(tester, "add");
+  if (argv[1]!=NULL) {
+    cmds(text2, text);
+  }
+  else {
+    printf("Note Name: ");
 
-       fgets(note, 80, stdin);
-       strcpy(fname,note);
-       i2 = strlen(fname)-1;
+    fgets(note, 80, stdin);
+    strcpy(fname,note);
+    i2 = strlen(fname)-1;
 
-       if( fname[ i2 ] == '\n')
-          fname[i2] = '\0';
+    if( fname[ i2 ] == '\n')
+      fname[i2] = '\0';
 
     FILE *fp;
     fp = fopen(fname, "a");
@@ -100,11 +98,11 @@ int main (int argc, char const *argv[])
     i = strlen(str)-1;
 
     if( str[ i ] == '\n')
-       str[i] = '\0';
+      str[i] = '\0';
 
     printf("%sOk wrote:%s %s\"%s to your note!\"%s\n",blue, none, yellow, str, none);
     fprintf(fp,"%s", str);
     fclose(fp);
- writeIndex(fname);
-   }
- }
+    writeIndex(fname);
+  }
+}
