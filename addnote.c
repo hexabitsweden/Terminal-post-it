@@ -38,7 +38,7 @@ char text2[200];
 
 
 
- writeIndex(string fname)
+void writeIndex(string fname)
      {
     char danne[40];
     char danne2[40];
@@ -49,7 +49,7 @@ char text2[200];
 
  }
 
-  cmds(char *inpt, string text)
+ void cmds(char *inpt, string text)
       {
       strcpy(fname,inpt);
       i2 = strlen(fname)-1;
@@ -73,13 +73,8 @@ char text2[200];
 
  }
 
- donner() {
+int main (int argc, char const *argv[])
 
- }
-
-int  main(argc, argv)
-
-   int argc; char **argv;
       {
         strcpy(text2, argv[2]);
         strcpy(text, argv[3]);
@@ -87,7 +82,6 @@ int  main(argc, argv)
         strcpy(tester, "add");
         if (argv[1]!=NULL) {
             cmds(text2, text);
-               donner();
                    }
         else {
        printf("Note Name: ");

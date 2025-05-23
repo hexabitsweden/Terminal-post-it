@@ -35,10 +35,9 @@ char tester[10];
 char inpt[20];
 char text[200];
 char text2[200];
- int  main(argc, argv)
 
-   int argc; char **argv;
-      {
+int main (int argc, char const *argv[])
+{
 
        strcpy(fname, argv[1]);
        i2 = strlen(fname)-1;
@@ -59,5 +58,4 @@ char text2[200];
     fprintf(fp,"%s", str);
     fclose(fp);
    }
-
 

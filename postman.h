@@ -12,3 +12,4 @@ void killNote();
 void markDone();
 void showLog();
 void oneline(char*);
+void writeIndex(string fname);

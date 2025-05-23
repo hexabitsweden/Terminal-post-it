@@ -38,9 +38,19 @@ char *spacer="            ";
 int cols;
 char tcols[8];
 char redc;
-  int  main(argc, argv)
+void writeIndex(char *fname)
+     {
+    char danne[40];
+    char danne2[40];
+    strcpy(danne,"./APPEND ");
+    strcpy(danne2,fname);
+    strcat(danne,danne2);
+    system(danne);
 
-   int argc; char **argv;
+ }
+
+int main (int argc, char const *argv[])
+
       {
        printf("Note Name: ");
        fgets(note, 80, stdin);
@@ -78,15 +88,5 @@ char redc;
    }
 
 
- writeIndex(char *fname)
-     {
-    char danne[40];
-    char danne2[40];
-    strcpy(danne,"./APPEND ");
-    strcpy(danne2,fname);
-    strcat(danne,danne2);
-    system(danne);
-
- }
 
 

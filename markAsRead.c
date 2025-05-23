@@ -37,10 +37,9 @@ char text2[200];
 int i2;
 int i;
 
- int  main(argc, argv)
+int main (int argc, char const *argv[])
+{
 
-   int argc; char **argv;
-      {
        strcpy(fname, argv[1]);
 
        i2 = strlen(fname)-1;
