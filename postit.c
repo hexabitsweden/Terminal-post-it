@@ -344,7 +344,7 @@ char listdir(char files)
   }
   else
   perror ("Couldn't open the directory");
-  return 0;
+    return 1;
 }
 
 
@@ -734,7 +734,7 @@ void markDone()
 
 void showLog()
 {
- /* system("./testIncoming"); */
+  /* system("./testIncoming"); */
   FILE* fpd;
   char buf[bufsize], *tok, fname[18];
   strcpy(fname, "./notes/inlog.txt");
@@ -793,7 +793,7 @@ void oneline(char* tcol)
 
 void readOLD()
 {
- /* system("./testIncoming"); */
+  /* system("./testIncoming"); */
   char *p;
   FILE* fpd;
   char buf[bufsize], *tok, fname[22];
