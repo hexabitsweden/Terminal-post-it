@@ -31,12 +31,11 @@
 #define men    "menu"
 #define SIZE 256
 /*****************************************
- *      *
- *            *
- *               *
- *  *
- *           *
- * *
+ *                                       *
+ *        Terminal Postit's              *
+ *              2012                     *
+ *    Daniel "hexabit" Jendinger         *
+ *                                       *
  ****************************************/
 char tt;
 char tname[60];
