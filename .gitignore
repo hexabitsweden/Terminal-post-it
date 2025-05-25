@@ -4,3 +4,5 @@ gettxt
 APPEND2  
 tnotescmd  
 tags
+./src/tags
+src/tags
