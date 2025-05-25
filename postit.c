@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <sys/file.h>
 #include <strings.h>
+#include <threads.h>
 #define bufsize 1024
 #define red   "\033[0;31m"
 #define cyan  "\033[1;36m"
@@ -157,7 +158,6 @@ int readGet()
         wt=getchar();
         lwait=0;
       }
-
 
       printf(" %s %s %s(%i)%s%s ", tcols, none, white, tick, none, string1);
       lister[tick] = tok;
@@ -574,6 +574,11 @@ void readNote(string tname){
   char bl='b';
   char yy='y';
   int metr=0;
+  char fullname[20];
+  strcpy(fullname,"./notes/");
+  strcat(fullname, tname);
+  printf("Fullname: %s", fullname);
+
   if ((fpd = fopen(tname,"rt")) == '\0')
   {
     fprintf(stderr,"%sError opening file: %s%s\n",red, none, tname);
