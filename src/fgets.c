@@ -38,6 +38,7 @@ char *spacer="            ";
 int cols;
 char tcols[8];
 char redc;
+
 void writeIndex(char *fname)
 {
   char danne[40];
@@ -70,8 +71,14 @@ int main (int argc, char const *argv[])
   }
 
 
+  char fullname[20];
+  strcpy(fullname,"./notes/");
+  strcat(fullname, fname);
+  printf("Fullname: %s", fullname);
+
+
   FILE *fp;
-  fp = fopen(fname, "a");
+  fp = fopen(fullname, "a");
   printf("For background color: type: Red=\"r\", Green=\"g\" or Blue=\"b\" (none=Yellow)\n");
   printf("Enter text: ");
   fgets(str, 450, stdin);

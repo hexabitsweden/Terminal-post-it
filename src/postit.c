@@ -356,7 +356,7 @@ char listdir(char files)
 
 void notedb()
 {
-  system("vim notes.db");
+  system("vi ./notes/notes.db");
   menu();
 }
 
