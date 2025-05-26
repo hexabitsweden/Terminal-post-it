@@ -352,8 +352,6 @@ char listdir(char files)
     return 1;
 }
 
-
-
 void notedb()
 {
   system("vi ./notes/notes.db");
