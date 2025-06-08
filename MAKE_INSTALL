@@ -7,17 +7,26 @@
 
 # Comment out below if you want to debug #
 
-cc ./src/markAsRead.c -o MARKDONE  
-cc ./src/postit.c -o tnotes 
-cc ./src/fgets.c -o gettxt  
-cc ./src/addmore.c -o APPEND2  
-cc ./src/addnote.c -o tnotescmd 
+cc ./src/markAsRead.c -o MARKDONE  2>/dev/null
+cc ./src/postit.c -o tnotes 2>/dev/null
+cc ./src/fgets.c -o gettxt  2>/dev/null
+cc ./src/addmore.c -o APPEND2  2>/dev/null
+cc ./src/addnote.c -o tnotescmd 2>/dev/null
 
 mkdir -p /home/hexabit/.local/share/tpostit
 cp -rf ../Terminal-post-it/*  /home/$USER/.local/share/tpostit/
 echo 'alias tpostit="cd /home/$USER/.local/share/tpostit/;./tnotes"' >> /home/$USER/.bashrc
 echo "alias tpostit 'cd /home/$USER/.local/share/tpostit/;./tnotes'" >> /home/$USER/.config/fish/config.fish
-bash --init-file /home/$USER/.bashrc
+
+rm MARKDONE 
+rm tnotes 
+rm gettxt  
+rm APPEND2  
+rm tnotescmd  
+echo "";echo"";
+echo "DONE! Please restart your shell or source your shell's .rc and run \"tpostit\""
+echo ""
+#bash --init-file /home/$USER/.bashrc
 
 
 
