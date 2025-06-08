@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -rf /home/$USER/.local/share/tpostit
+sed -i '/tpostit/d' /home/$USER/.bashrc
+sed -i '/tpostit/d' /home/$USER/.config/fish/config.fish
